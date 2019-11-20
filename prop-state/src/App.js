@@ -27,20 +27,31 @@ App.defaultProps = {
 }
 
 class Parent extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      cars:['s-BMW','s-Mercedes','s-Audi'],
+    };
+    this.handleClick = this.handleClick.bind(this); //have to bind this
+  }
+
+  handleClick(){
+    this.setState(
+      {cars: this.state.cars.reverse()} //reverse props
+    );
+  }
+
   render(){
     console.log(this.props);
     const title = this.props.title;
     return(
       <div>
-        <h2>{title}</h2>
-        <Cars index='0' cars={this.props.cars}/>
+        <button onClick={this.handleClick}>{title}</button>
+        <Cars index='0' cars={this.state.cars}/>
       </div>
     );
   }
-}
-
-Parent.defaultProps = {
-  cars:['BMW','Mercedes','Audi'],
 }
 
 class Cars extends React.Component {
@@ -49,9 +60,9 @@ class Cars extends React.Component {
     const carNames = this.props.cars;
     return(
       <div>
-        <p>{carNames.map((item,i)=>{
-            return item + " "
-          })}</p>
+        <div>{carNames.map((item,i)=>{
+            return <p key={i}>{item}</p>
+          })}</div>
       </div>
     );
   }
