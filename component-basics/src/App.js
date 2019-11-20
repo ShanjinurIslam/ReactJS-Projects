@@ -11,15 +11,19 @@ class App extends React.Component{
     this._yourname = "Ammy"
     this.state = {};
   }
-
+  //no need to mention function/let/var
   sayHello(a){
     return "Hello "+a;
+  }
+
+  sayGreeting = (a) => {
+    return "Good Morning "+a;
   }
 
   render(){
     return (
       <div className="App">
-        <h2>Here is some sample data: {this.sayHello(this._yourname)} </h2>
+        <p>{this.sayGreeting(this._yourname)}</p>
       </div>
     );
   }

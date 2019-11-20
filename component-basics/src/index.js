@@ -4,7 +4,18 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+function timeTick(){
+  const element = (<div>
+    <h1>The time is:</h1>
+    <h2>{new Date().toLocaleTimeString()}</h2>
+  </div>);
+  ReactDOM.render(element, document.getElementById('time'));
+  console.log("printed");
+}
+
+
 ReactDOM.render(<App />, document.getElementById('root'));
+setInterval(timeTick(),1000);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
