@@ -13,8 +13,9 @@ class NameCatagory extends React.Component{
           })}</div> 
         </div>
         <p>
-        <button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-shopping-cart"></span> Total $0.0
+        <hr/>
+        <button type="button" class="btn btn-info btn-sm">
+          Total $0.0
         </button>
       </p>
       </div>
