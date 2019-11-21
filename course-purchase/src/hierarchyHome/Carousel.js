@@ -17,12 +17,12 @@ class Carousel extends React.Component{
                     return <li key={i} data-target="#carouselExampleIndicators" data-slide-to={i} className="active"></li>
                 else
                     return <li key={i} data-target="#carouselExampleIndicators" data-slide-to={i}></li>
-                
+
             })}
           </ol>
 
           <div className="carousel-inner" role="listbox">
-          
+
             {items.map((item,i)=>{
                 if(i==0){
                     return <div  key={i}  className="carousel-item active">
@@ -35,7 +35,7 @@ class Carousel extends React.Component{
                     </div>
                 }
             })}
-          
+
           </div>
           <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -46,7 +46,7 @@ class Carousel extends React.Component{
             <span className="sr-only">Next</span>
           </a>
         </div>
-        <Courses courses={this.props.courses}/>
+        <Courses courses={this.props.courses} func={this.props.func}/>
         </div>
     }
 }

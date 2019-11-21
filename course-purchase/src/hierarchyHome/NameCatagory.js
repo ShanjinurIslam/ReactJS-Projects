@@ -1,7 +1,7 @@
 import React from 'react'
 
 class NameCatagory extends React.Component{
-    
+
     render(){
         var catagories = this.props.catagories ;
         //have to bind the whole syntex in curly braces
@@ -10,13 +10,13 @@ class NameCatagory extends React.Component{
         <div className="list-group">
         <div>{catagories.map((item,i)=>{
             return <a href="#" className="list-group-item" key={i}>{item}</a>
-          })}</div> 
+          })}</div>
         </div>
-        <p>
-        <button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-shopping-cart"></span> Total $0.0
-        </button>
-      </p>
+        <hr/>
+        <div>
+          <button type="button" className="btn btn-info btn-sm">Total ${this.props.total.toFixed(2)}
+          </button>
+        </div>
       </div>
     }
 }
