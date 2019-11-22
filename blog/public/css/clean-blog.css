@@ -170,8 +170,7 @@ img::-moz-selection {
 
 header.masthead {
   margin-bottom: 50px;
-  background: no-repeat center center;
-  background-color: #868e96;
+  background: url(../img/home-bg.jpg);
   background-attachment: scroll;
   position: relative;
   background-size: cover;
@@ -408,4 +407,8 @@ footer .copyright {
 .btn-lg {
   font-size: 16px;
   padding: 25px 35px;
+}
+
+.ttt {
+  background: url(../img/home-bg.jpg);
 }
